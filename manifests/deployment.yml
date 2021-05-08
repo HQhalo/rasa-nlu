@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "assistantreg-272f"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "assistantreg-272f"
+  template:
+    metadata:
+      labels:
+        app: "assistantreg-272f"
+    spec:
+      containers:
+        - name: "assistantreg-272f"
+          image: "assistantregnlu.azurecr.io/assistantreg"
+          ports:
+          - containerPort: 5005
