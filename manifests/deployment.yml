@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: "assistantreg-272f"
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: "assistantreg-272f"
