@@ -1,12 +1,11 @@
 version: "2.0"
 
 nlu:
-- intent: greet
+- intent: stop
   examples: |
-    - hi
-    - hello
-    - xin chào
-    - chào em
+    - tắt nhạc
+    - dừng lại
+    - im lặng
 
 - intent: goodbye
   examples: |
@@ -18,9 +17,25 @@ nlu:
   examples: |
     - tôi là ai
     - tôi tên là gì
+    - bạn biết tôi là ai không
+    - tên tôi là gì
 - intent: play_music
   examples: |
-    - chơi nhạc
-    - bật nhạc
-    - chơi nhạc nào
-    - bật nhạc nào
+    - bật bài nhạc [nàng thơ]{"entity": "song_name"}
+    - bật bài hát [nàng thơ]{"entity": "song_name"}
+- intent: play_list_music
+  examples: |
+    - bật danh sách nhạc yêu thích của tôi
+    - mở danh sách bài hát yêu thích
+- intent: open_calendar
+  examples: |
+    - lịch trình hôm nay của tôi
+    - danh sách công việc 
+    - nhắc tôi lịch làm việc
+    - nhắc tôi lịch trình 
+- intent: open_message
+  examples: |
+    - mở tin nhắn cuối cùng của tôi
+    - đọc cho tôi tin nhắn gần đây nhất
+    - mỏ tin nhăn gần đây nhất
+    - đọc cho tôi tin nhắn cuối cùng
